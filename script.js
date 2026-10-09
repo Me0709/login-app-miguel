@@ -5,7 +5,7 @@ const resultado = document.getElementById('resultado');
 
 function validarCampo(campo, idError, mensaje) {
   const error = document.getElementById(idError);
-  if (campo.value === '') {
+  if (campo.value.trim() === '') {
     campo.classList.add('invalido');
     error.textContent = mensaje;
     return false;
