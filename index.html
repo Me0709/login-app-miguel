@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar sesión</title>
+</head>
+<body>
+  <main class="tarjeta">
+    <h1>Iniciar sesión</h1>
+    <form id="login" novalidate>
+      <label for="usuario">Usuario</label>
+      <input type="text" id="usuario" name="usuario" autocomplete="username">
+      <p class="error" id="error-usuario" role="alert"></p>
+
+      <label for="clave">Contraseña</label>
+      <input type="password" id="clave" name="clave" autocomplete="current-password">
+      <p class="error" id="error-clave" role="alert"></p>
+
+      <button type="submit">Ingresar</button>
+      <p class="resultado" id="resultado" role="status"></p>
+    </form>
+  </main>
+</body>
+</html>
