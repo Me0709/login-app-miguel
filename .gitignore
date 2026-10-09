@@ -1,0 +1,7 @@
+# Dependencias y compilados
+node_modules/
+
+# Configuración local y secretos
+.env
+.vscode/
+*.log
