@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar sesión</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="tarjeta" id="tarjeta">
+    <aside class="panel">
+      <div class="logo" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z"/>
+          <path d="M9 12l2 2 4-4"/>
+        </svg>
+      </div>
+      <div class="panel-texto">
+        <h2>Bienvenido</h2>
+        <p>Ingresa tus credenciales para acceder a tu cuenta y continuar donde lo dejaste.</p>
+      </div>
+      <p class="panel-pie">Taller de control de versiones<br>con Git y GitHub</p>
+    </aside>
+
+    <section class="contenido">
+      <header class="cabecera">
+        <h1>Iniciar sesión</h1>
+        <p class="subtitulo">Usa tu usuario y contraseña.</p>
+      </header>
+
+      <form id="login" novalidate>
+        <div class="campo" id="campo-usuario">
+          <svg class="icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="8" r="4"/>
+            <path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/>
+          </svg>
+          <input type="text" id="usuario" name="usuario" placeholder=" " autocomplete="username">
+          <label for="usuario">Usuario</label>
+          <p class="error" id="error-usuario" role="alert"></p>
+        </div>
+
+        <div class="campo" id="campo-clave">
+          <svg class="icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="4" y="11" width="16" height="10" rx="2"/>
+            <path d="M8 11V8a4 4 0 018 0v3"/>
+          </svg>
+          <input type="password" id="clave" name="clave" placeholder=" " autocomplete="current-password">
+          <label for="clave">Contraseña</label>
+          <button type="button" class="ojo" id="ojo" aria-label="Mostrar contraseña">
+            <svg class="ojo-abierto" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/>
+              <circle cx="12" cy="12" r="3"/>
+            </svg>
+            <svg class="ojo-cerrado" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M3 3l18 18"/>
+              <path d="M10.6 6.1A10 10 0 0112 6c6.4 0 10 6 10 6a17 17 0 01-3.2 3.9M6.6 7.6C3.9 9.4 2 12 2 12s3.6 7 10 7a10 10 0 004.4-1"/>
+              <path d="M9.9 10a3 3 0 004.1 4.1"/>
+            </svg>
+          </button>
+          <p class="error" id="error-clave" role="alert"></p>
+        </div>
+
+        <p class="aviso" id="aviso-mayus" hidden>Bloq Mayús está activado</p>
+
+        <button type="submit" class="ingresar" id="ingresar">
+          <span class="texto">Ingresar</span>
+          <span class="spinner" aria-hidden="true"></span>
+          <svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M5 12.5l4.5 4.5L19 7.5"/>
+          </svg>
+        </button>
+
+        <p class="resultado" id="resultado" role="status"></p>
+      </form>
+
+      <footer class="pie">
+        <a href="#">¿Olvidaste tu contraseña?</a>
+      </footer>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
